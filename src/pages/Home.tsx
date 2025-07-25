@@ -38,51 +38,97 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-background to-section-bg py-20 overflow-hidden">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                  Hi, I'm{' '}
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    Alex Johnson
-                  </span>
-                </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground">
-                  Expert in DevOps, Project Management & Finance
-                </p>
-              </div>
+      {/* Full-Screen Hero Section with Background Image */}
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
+        
+        {/* Animated Tech Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-20 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-1 h-12 bg-accent/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-32 left-1/4 w-1 h-8 bg-primary/20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-20 right-20 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+          <div className="space-y-8 animate-fade-in">
+            <div className="space-y-6">
+              <h1 
+                className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight"
+                style={{ 
+                  textShadow: 'var(--hero-text-shadow)',
+                  filter: 'drop-shadow(var(--hero-text-glow))'
+                }}
+              >
+                Hi, I'm{' '}
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Alex Johnson
+                </span>
+              </h1>
               
-              <p className="text-lg text-muted-foreground max-w-xl">
-                Driving digital transformation and delivering exceptional results through 
-                technical expertise, strategic leadership, and financial acumen.
+              <p 
+                className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light"
+                style={{ 
+                  textShadow: 'var(--hero-text-shadow)',
+                  filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
+                }}
+              >
+                Expert in DevOps, Project Management & Finance
               </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="hero" asChild>
-                  <Link to="/devops">
-                    View My Work <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">Get In Touch</Link>
-                </Button>
-              </div>
             </div>
+            
+            <p 
+              className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed"
+              style={{ 
+                textShadow: 'var(--hero-text-shadow)',
+                filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.2))'
+              }}
+            >
+              Driving digital transformation and delivering exceptional results through 
+              technical expertise, strategic leadership, and financial acumen.
+            </p>
 
-            <div className="relative animate-scale-in">
-              <div className="relative z-10">
-                <img 
-                  src={heroImage} 
-                  alt="Professional portrait" 
-                  className="rounded-2xl shadow-extra-large w-full max-w-md mx-auto"
-                />
-              </div>
-              <div className="absolute -top-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-4 -left-4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"></div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+              <Button 
+                size="lg" 
+                variant="hero" 
+                className="text-lg px-8 py-4 shadow-glow hover:shadow-xl transition-all duration-300"
+                asChild
+              >
+                <Link to="/devops">
+                  View My Work <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+                style={{ 
+                  textShadow: 'var(--hero-text-shadow)',
+                  backdropFilter: 'blur(10px)'
+                }}
+                asChild
+              >
+                <Link to="/contact">Get In Touch</Link>
+              </Button>
             </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>

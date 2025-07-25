@@ -135,6 +135,7 @@ export default {
 				'medium': 'var(--shadow-md)',
 				'large': 'var(--shadow-lg)',
 				'extra-large': 'var(--shadow-xl)',
+				'glow': 'var(--shadow-glow)',
 			}
 		}
 	},
