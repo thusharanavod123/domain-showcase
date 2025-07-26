@@ -22,21 +22,28 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
-      <nav className="container mx-auto px-6 py-4">
+    <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border/50 shadow-lg">
+      <nav className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-            Portfolio
+          <Link to="/" className="group flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center shadow-glow">
+              <span className="text-lg font-bold text-primary-foreground">AJ</span>
+            </div>
+            <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+              Alex Johnson
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  isActive(item.href) 
+                    ? 'bg-primary text-primary-foreground shadow-medium' 
+                    : 'text-foreground hover:bg-secondary hover:text-primary'
                 }`}
               >
                 {item.name}
@@ -57,13 +64,15 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-2 animate-fade-in">
+          <div className="md:hidden mt-6 pb-4 space-y-2 animate-fade-in bg-card/95 backdrop-blur-sm rounded-lg p-4 border border-border/50">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-muted-foreground'
+                className={`block px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  isActive(item.href)
+                    ? 'bg-primary text-primary-foreground shadow-medium'
+                    : 'text-foreground hover:bg-secondary hover:text-primary'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
