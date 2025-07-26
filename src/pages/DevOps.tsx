@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
 import RepoCard from '@/components/ui/repo-card';
 import SkillBadge from '@/components/ui/skill-badge';
-import { Github, ExternalLink, Server, Cloud, Code, Database, Terminal, Shield, Zap, Globe, TrendingUp, Award } from 'lucide-react';
+import { Github, ExternalLink, Server, Cloud, Code, Database } from 'lucide-react';
 
 // Mock GitHub API response for demonstration
 const mockRepos = [
@@ -92,82 +90,35 @@ const DevOps = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Enhanced Header Section */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        <div className="container mx-auto px-6 relative">
-          <div className="max-w-5xl mx-auto text-center space-y-12">
-            <div className="space-y-6 animate-fade-in">
-              <Badge variant="secondary" className="px-4 py-2 text-sm font-semibold">
-                <Terminal className="mr-2 h-4 w-4" />
-                DevOps Engineering Expertise
-              </Badge>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                Building the{' '}
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Future
-                </span>
-                {' '}of Infrastructure
+      {/* Header Section */}
+      <section className="py-20 bg-gradient-to-br from-background to-section-bg">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="space-y-4 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+                DevOps Engineering
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Architecting scalable, secure, and automated infrastructure solutions that power 
-                modern applications at enterprise scale
+              <p className="text-xl text-muted-foreground">
+                Building scalable, reliable, and secure infrastructure for modern applications
               </p>
             </div>
             
-            {/* Stats Cards */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-slide-up">
-              <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-sm text-muted-foreground">Microservices Deployed</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">99.9%</div>
-                  <div className="text-sm text-muted-foreground">System Uptime</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary mb-2">75%</div>
-                  <div className="text-sm text-muted-foreground">Deployment Speed Increase</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-glow transition-all duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-accent mb-2">50+</div>
-                  <div className="text-sm text-muted-foreground">Teams Supported</div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Expertise Highlights */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-              <div className="group flex items-center space-x-3 bg-card/60 backdrop-blur-sm rounded-lg px-4 py-3 border border-border/30 hover:border-primary/50 transition-all duration-300">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Cloud className="h-5 w-5 text-primary" />
-                </div>
-                <span className="font-semibold text-foreground">Multi-Cloud Architecture</span>
+            <div className="flex flex-wrap justify-center gap-4 animate-slide-up">
+              <div className="flex items-center space-x-2 bg-card rounded-lg px-4 py-2 shadow-medium">
+                <Server className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Infrastructure Automation</span>
               </div>
-              <div className="group flex items-center space-x-3 bg-card/60 backdrop-blur-sm rounded-lg px-4 py-3 border border-border/30 hover:border-primary/50 transition-all duration-300">
-                <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  <Shield className="h-5 w-5 text-accent" />
-                </div>
-                <span className="font-semibold text-foreground">Security & Compliance</span>
+              <div className="flex items-center space-x-2 bg-card rounded-lg px-4 py-2 shadow-medium">
+                <Cloud className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Cloud Architecture</span>
               </div>
-              <div className="group flex items-center space-x-3 bg-card/60 backdrop-blur-sm rounded-lg px-4 py-3 border border-border/30 hover:border-primary/50 transition-all duration-300">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Zap className="h-5 w-5 text-primary" />
-                </div>
-                <span className="font-semibold text-foreground">Performance Optimization</span>
+              <div className="flex items-center space-x-2 bg-card rounded-lg px-4 py-2 shadow-medium">
+                <Code className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">CI/CD Pipelines</span>
               </div>
-              <div className="group flex items-center space-x-3 bg-card/60 backdrop-blur-sm rounded-lg px-4 py-3 border border-border/30 hover:border-primary/50 transition-all duration-300">
-                <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                  <Globe className="h-5 w-5 text-accent" />
-                </div>
-                <span className="font-semibold text-foreground">Global Infrastructure</span>
+              <div className="flex items-center space-x-2 bg-card rounded-lg px-4 py-2 shadow-medium">
+                <Database className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Monitoring & Observability</span>
               </div>
             </div>
           </div>
@@ -205,92 +156,33 @@ const DevOps = () => {
         </div>
       </section>
 
-      {/* Skills Section with Tabs */}
+      {/* Skills Section */}
       <section className="py-20 bg-section-bg">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Technical Expertise
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive skills across the entire DevOps lifecycle
-            </p>
-          </div>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+            Technical Skills & Tools
+          </h2>
           
-          <Tabs defaultValue="overview" className="max-w-6xl mx-auto">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="overview" className="text-sm">Skills Overview</TabsTrigger>
-              <TabsTrigger value="tools" className="text-sm">Tools & Technologies</TabsTrigger>
-              <TabsTrigger value="experience" className="text-sm">Experience Level</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="overview">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {devopsSkills.map((category, index) => (
-                  <Card 
-                    key={category.category} 
-                    className="group hover:shadow-large transition-all duration-300 animate-fade-in"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <CardHeader>
-                      <CardTitle className="text-lg flex items-center gap-2 group-hover:text-primary transition-colors">
-                        <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                          <Code className="h-4 w-4 text-primary" />
-                        </div>
-                        {category.category}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="flex flex-wrap gap-2">
-                        {category.skills.map((skill) => (
-                          <SkillBadge key={skill} skill={skill} level="expert" />
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="tools">
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {devopsSkills.flatMap(category => category.skills).map((skill, index) => (
-                  <Card key={skill} className="p-4 text-center hover:shadow-medium transition-all duration-200 animate-scale-in" style={{ animationDelay: `${index * 0.05}s` }}>
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                      <Server className="h-6 w-6 text-primary" />
-                    </div>
-                    <p className="text-sm font-medium text-foreground">{skill}</p>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-            
-            <TabsContent value="experience">
-              <div className="space-y-6">
-                {devopsSkills.map((category, index) => (
-                  <Card key={category.category} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                    <CardContent className="p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-foreground">{category.category}</h3>
-                        <Badge variant="secondary" className="bg-primary/10 text-primary">
-                          <TrendingUp className="mr-1 h-3 w-3" />
-                          Expert Level
-                        </Badge>
-                      </div>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        {category.skills.map((skill) => (
-                          <div key={skill} className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span className="text-sm text-foreground">{skill}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-          </Tabs>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {devopsSkills.map((category, index) => (
+              <Card 
+                key={category.category} 
+                className="animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardHeader>
+                  <CardTitle className="text-lg">{category.category}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill) => (
+                      <SkillBadge key={skill} skill={skill} level="expert" />
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -331,57 +223,33 @@ const DevOps = () => {
         </div>
       </section>
 
-      {/* Certifications & Achievements */}
+      {/* Certifications */}
       <section className="py-20 bg-section-bg">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
-              Certifications & Recognition
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Industry-recognized expertise and continuous learning
-            </p>
-          </div>
+          <h2 className="text-3xl font-bold text-foreground text-center mb-12">
+            Certifications
+          </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {certifications.map((cert, index) => (
               <Card 
                 key={cert.name} 
-                className="group hover:shadow-glow transition-all duration-300 animate-fade-in"
+                className="animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-300">
-                      <Award className="h-8 w-8 text-primary" />
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-foreground">{cert.name}</h3>
+                      <p className="text-sm text-muted-foreground">Earned in {cert.year}</p>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">{cert.name}</h3>
-                      <p className="text-sm text-muted-foreground mb-3">Certified {cert.year}</p>
-                      <Badge variant="outline" className="text-xs">
-                        Professional Level
-                      </Badge>
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <ExternalLink className="h-5 w-5 text-primary" />
                     </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          {/* Additional Achievement Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <Card className="text-center p-6 bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
-              <div className="text-3xl font-bold text-primary mb-2">4</div>
-              <div className="text-sm font-medium text-foreground">Professional Certifications</div>
-            </Card>
-            <Card className="text-center p-6 bg-gradient-to-br from-accent/5 to-accent/10 border-accent/20">
-              <div className="text-3xl font-bold text-accent mb-2">8+</div>
-              <div className="text-sm font-medium text-foreground">Years Experience</div>
-            </Card>
-            <Card className="text-center p-6 bg-gradient-to-br from-primary/5 to-accent/5 border-border">
-              <div className="text-3xl font-bold text-foreground mb-2">24/7</div>
-              <div className="text-sm font-medium text-foreground">System Monitoring</div>
-            </Card>
           </div>
         </div>
       </section>
