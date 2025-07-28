@@ -44,19 +44,19 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "alex.johnson@example.com",
-      href: "mailto:alex.johnson@example.com"
+      value: "padiwelathusharanavod.com",
+      href: "mailto:padiwelathusharanavod.com"
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+94713768668",
+      href: "tel:+94713768668"
     },
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "kururnegala, Sri Lanka",
       href: "#"
     }
   ];
@@ -65,19 +65,19 @@ const Contact = () => {
     {
       icon: <Github className="h-5 w-5" />,
       label: "GitHub",
-      href: "https://github.com/username",
+      href: "https://github.com/thusharanavod123/",
       description: "View my code repositories and open-source contributions"
     },
     {
       icon: <Linkedin className="h-5 w-5" />,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/username",
+      href: "https://linkedin.com/in/thushara-navod-padiwela-ab8194329/",
       description: "Connect with me professionally and view my experience"
     },
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      href: "mailto:alex.johnson@example.com",
+      href: "mailto:padiwelathusharanavod.com",
       description: "Send me a direct email for inquiries and opportunities"
     }
   ];
