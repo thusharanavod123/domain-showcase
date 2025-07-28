@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Portfolio</h3>
+            <h3 className="text-lg font-semibold text-foreground">Thushara Navod</h3>
             <p className="text-sm text-muted-foreground">
               Expert in DevOps, Project Management, and Finance with a passion for 
               driving digital transformation and delivering exceptional results.
@@ -63,7 +63,7 @@ const Footer = () => {
               © 2024 Portfolio. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Built with React, TypeScript & Tailwind CSS
+              
             </p>
           </div>
         </div>
