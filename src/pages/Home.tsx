@@ -165,8 +165,13 @@ const Home = () => {
           <p className="text-base text-white/80 mb-6">{area.description}</p>
           <Button
             asChild
-            variant="outline"
-            className="group-hover:border-accent group-hover:text-accent transition-all"
+  variant="outline"
+  className="
+    group-hover:border-green-400
+    group-hover:text-green-400
+    transition-all
+    duration-200
+  "
           >
             <Link to={area.link}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
           </Button>
