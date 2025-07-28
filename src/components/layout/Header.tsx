@@ -26,7 +26,7 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="text-xl font-bold text-foreground hover:text-primary transition-colors">
-            Portfolio
+           Thushara Navod
           </Link>
 
           {/* Desktop Navigation */}
