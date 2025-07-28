@@ -1,107 +1,139 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import SkillBadge from '@/components/ui/skill-badge';
-import { ArrowRight, Code2, TrendingUp, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-image.jpg';
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import SkillBadge from "@/components/ui/skill-badge";
+import { ArrowRight, Code2, TrendingUp, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-image.png";
 
 const Home = () => {
   const coreSkills = [
     // DevOps Skills
-    'Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Terraform', 'Jenkins',
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "CI/CD",
+    "Terraform",
+    "Jenkins",
     // PM Skills
-    'Agile', 'Scrum', 'Project Planning', 'Risk Management', 'Stakeholder Management',
+    "Agile",
+    "Scrum",
+    "Project Planning",
+    "Risk Management",
+    "Stakeholder Management",
     // Finance Skills
-    'Financial Analysis', 'Budgeting', 'Forecasting', 'Risk Assessment', 'Investment Analysis'
+    "Financial Analysis",
+    "Budgeting",
+    "Forecasting",
+    "Risk Assessment",
+    "Investment Analysis",
   ];
 
   const expertise = [
     {
       icon: <Code2 className="h-8 w-8 text-primary" />,
       title: "DevOps Engineering",
-      description: "Cloud infrastructure, automation, and CI/CD pipeline expertise with modern tools and practices.",
-      link: "/devops"
+      description:
+        "Cloud infrastructure, automation, and CI/CD pipeline expertise with modern tools and practices.",
+      link: "/devops",
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Project Management", 
-      description: "Leading cross-functional teams and delivering complex projects on time and within budget.",
-      link: "/project-management"
+      title: "Project Management",
+      description:
+        "Leading cross-functional teams and delivering complex projects on time and within budget.",
+      link: "/project-management",
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-primary" />,
       title: "Finance & Analysis",
-      description: "Strategic financial planning, analysis, and data-driven decision making for business growth.",
-      link: "/finance"
-    }
+      description:
+        "Strategic financial planning, analysis, and data-driven decision making for business growth.",
+      link: "/finance",
+    },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Full-Screen Hero Section with Background Image */}
-      <section 
+      <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-[1px]"></div>
-        
+
         {/* Animated Tech Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-20 w-2 h-2 bg-primary/30 rounded-full animate-pulse"></div>
-          <div className="absolute top-40 right-32 w-1 h-12 bg-accent/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-32 left-1/4 w-1 h-8 bg-primary/20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-20 right-20 w-2 h-2 bg-accent/30 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+          <div
+            className="absolute top-40 right-32 w-1 h-12 bg-accent/20 animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className="absolute bottom-32 left-1/4 w-1 h-8 bg-primary/20 animate-pulse"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute bottom-20 right-20 w-2 h-2 bg-accent/30 rounded-full animate-pulse"
+            style={{ animationDelay: "0.5s" }}
+          ></div>
         </div>
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
-              <h1 
+              <h1
                 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight"
-                style={{ 
-                  textShadow: 'var(--hero-text-shadow)',
-                  filter: 'drop-shadow(var(--hero-text-glow))'
+                style={{
+                  textShadow: "var(--hero-text-shadow)",
+                  filter: "drop-shadow(var(--hero-text-glow))",
                 }}
               >
-                Hi, I'm{' '}
+                Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Thushara Navod
                 </span>
-              </h1>
-              
-              <p 
+              </h1>{" "}
+              {/*import heroImage from '@/assets/hero-image.jpg'; */}
+              <p
                 className="text-2xl md:text-3xl lg:text-4xl text-white/90 font-light"
-                style={{ 
-                  textShadow: 'var(--hero-text-shadow)',
-                  filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.3))'
+                style={{
+                  textShadow: "var(--hero-text-shadow)",
+                  filter: "drop-shadow(0 0 10px rgba(255,255,255,0.3))",
                 }}
               >
                 Expert in DevOps, Project Management & Finance
               </p>
             </div>
-            
-            <p 
+
+            <p
               className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed"
-              style={{ 
-                textShadow: 'var(--hero-text-shadow)',
-                filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.2))'
+              style={{
+                textShadow: "var(--hero-text-shadow)",
+                filter: "drop-shadow(0 0 8px rgba(255,255,255,0.2))",
               }}
             >
-              Driving digital transformation and delivering exceptional results through 
-              technical expertise, strategic leadership, and financial acumen.
+              Driving digital transformation and delivering exceptional results
+              through technical expertise, strategic leadership, and financial
+              acumen.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-              <Button 
-                size="lg" 
-                variant="hero" 
+              <Button
+                size="lg"
+                variant="hero"
                 className="text-lg px-8 py-4 shadow-glow hover:shadow-xl transition-all duration-300"
                 asChild
               >
@@ -109,13 +141,13 @@ const Home = () => {
                   View My Work <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="text-lg px-8 py-4 border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-300"
-                style={{ 
-                  textShadow: 'var(--hero-text-shadow)',
-                  backdropFilter: 'blur(10px)'
+                style={{
+                  textShadow: "var(--hero-text-shadow)",
+                  backdropFilter: "blur(10px)",
                 }}
                 asChild
               >
@@ -141,15 +173,16 @@ const Home = () => {
               Core Skills & Expertise
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A comprehensive skill set spanning technology, leadership, and financial analysis
+              A comprehensive skill set spanning technology, leadership, and
+              financial analysis
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 mb-16">
             {coreSkills.map((skill, index) => (
-              <SkillBadge 
-                key={skill} 
-                skill={skill} 
+              <SkillBadge
+                key={skill}
+                skill={skill}
                 level="advanced"
                 className={`animate-fade-in`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -173,8 +206,8 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {expertise.map((area, index) => (
-              <Card 
-                key={area.title} 
+              <Card
+                key={area.title}
                 className="group hover:shadow-large transition-all duration-300 hover:-translate-y-2 cursor-pointer animate-slide-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
@@ -190,7 +223,11 @@ const Home = () => {
                   <CardDescription className="text-center mb-6">
                     {area.description}
                   </CardDescription>
-                  <Button variant="outline" className="w-full group-hover:border-primary group-hover:text-primary" asChild>
+                  <Button
+                    variant="outline"
+                    className="w-full group-hover:border-primary group-hover:text-primary"
+                    asChild
+                  >
                     <Link to={area.link}>
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -210,8 +247,8 @@ const Home = () => {
               Ready to Work Together?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Let's discuss how my expertise in DevOps, project management, and finance 
-              can drive your next project to success.
+              Let's discuss how my expertise in DevOps, project management, and
+              finance can drive your next project to success.
             </p>
             <Button size="lg" variant="cta" asChild>
               <Link to="/contact">
