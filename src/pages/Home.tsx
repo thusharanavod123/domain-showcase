@@ -132,7 +132,7 @@ const Home = () => {
 
 
       {/* Areas of Expertise */}
-  <section className="py-20 bg-black">
+  <section className="py-20 bg-black text-center">
   <div className="container mx-auto px-6">
     <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-white tracking-tight">Areas of Expertise</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
@@ -143,18 +143,18 @@ const Home = () => {
           description: "Cloud infrastructure engineering, CI/CD automations, Kubernetes, Docker & IaC. Modern, scalable, resilient.", 
           link: "/devops",
         },
-        {
-          icon: <Users className="h-8 w-8 text-violet-400" />,
-          title: "Project Management",
-          description: "Agile & Scrum mastery, risk mitigation, and cross-functional team leadership for on-time, in-budget delivery.", 
-          link: "/project-management",
-        },
-        {
-          icon: <TrendingUp className="h-8 w-8 text-pink-400" />,
-          title: "Finance & Analysis",
-          description: "Financial planning, forecasting, investment modeling, and data-driven business growth strategies.", 
-          link: "/finance",
-        },
+        // {
+        //   icon: <Users className="h-8 w-8 text-violet-400" />,
+        //   title: "Project Management",
+        //   description: "Agile & Scrum mastery, risk mitigation, and cross-functional team leadership for on-time, in-budget delivery.", 
+        //   link: "/project-management",
+        // },
+        // {
+        //   icon: <TrendingUp className="h-8 w-8 text-pink-400" />,
+        //   title: "Finance & Analysis",
+        //   description: "Financial planning, forecasting, investment modeling, and data-driven business growth strategies.", 
+        //   link: "/finance",
+        // },
       ].map((area) => (
         <div
           key={area.title}
