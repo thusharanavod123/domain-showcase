@@ -10,7 +10,7 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'DevOps', href: '/devops' },
-    { name: 'Project Management', href: '/project-management' },
+    // { name: 'Project Management', href: '/project-management' },
    // { name: 'Finance', href: '/finance' },//
     { name: 'Contact', href: '/contact' },
   ];
