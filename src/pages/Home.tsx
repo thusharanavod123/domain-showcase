@@ -143,18 +143,18 @@ const Home = () => {
           description: "Cloud infrastructure engineering, CI/CD automations, Kubernetes, Docker & IaC. Modern, scalable, resilient.", 
           link: "/devops",
         },
-        // {
-        //   icon: <Users className="h-8 w-8 text-violet-400" />,
-        //   title: "Project Management",
-        //   description: "Agile & Scrum mastery, risk mitigation, and cross-functional team leadership for on-time, in-budget delivery.", 
-        //   link: "/project-management",
-        // },
-        // {
-        //   icon: <TrendingUp className="h-8 w-8 text-pink-400" />,
-        //   title: "Finance & Analysis",
-        //   description: "Financial planning, forecasting, investment modeling, and data-driven business growth strategies.", 
-        //   link: "/finance",
-        // },
+        {
+          icon: <Users className="h-8 w-8 text-violet-400" />,
+          title: "Project Management",
+          description: "Agile & Scrum mastery, risk mitigation, and cross-functional team leadership for on-time, in-budget delivery.", 
+          link: "/project-management",
+        },
+        {
+          icon: <TrendingUp className="h-8 w-8 text-pink-400" />,
+          title: "Finance & Analysis",
+          description: "Financial planning, forecasting, investment modeling, and data-driven business growth strategies.", 
+          link: "/finance",
+        },
       ].map((area) => (
         <div
           key={area.title}
